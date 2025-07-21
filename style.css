@@ -1,0 +1,51 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(#222, #111);
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #aaa;
+}
+
+button {
+  background: #8e44ad;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #732d91;
+}
+
+#fateBox {
+  margin-top: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+.emoji {
+  font-size: 2.5rem;
+  margin: 15px 0;
+}
