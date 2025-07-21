@@ -1,10 +1,13 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(#1d1d1d, #121212);
-  color: #ffffff;
-  text-align: center;
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
   padding: 0;
+  background: linear-gradient(to bottom, #1e1e1e, #121212);
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -12,59 +15,69 @@ body {
 }
 
 .container {
-  max-width: 90%;
-  width: 400px;
-  padding: 30px 20px;
-  background-color: #2a2a2a;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  width: 92%;
+  max-width: 420px;
+  background-color: #2b2b2b;
+  padding: 32px 24px;
+  border-radius: 24px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  animation: fadeIn 0.8s ease;
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 
 .subtitle {
   font-size: 1rem;
-  margin-bottom: 30px;
-  color: #bbb;
+  margin-bottom: 26px;
+  color: #aaa;
 }
 
 button {
-  background-color: #8e44ad;
-  color: white;
+  background: linear-gradient(135deg, #9b59b6, #8e44ad);
+  color: #fff;
   border: none;
-  padding: 14px 24px;
-  font-size: 1rem;
-  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  border-radius: 14px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-  background-color: #732d91;
+  transform: scale(1.03);
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.1);
 }
 
 #fateBox {
   margin-top: 30px;
+  animation: fadeIn 0.6s ease;
 }
 
 #fateText {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-size: 1.3rem;
+  margin-bottom: 14px;
 }
 
 .emoji {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 10px 0;
 }
 
 #fateTask {
-  font-size: 1rem;
-  color: #ddd;
+  font-size: 1.05rem;
+  color: #e1e1e1;
 }
 
 .hidden {
   display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
