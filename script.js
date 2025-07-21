@@ -101,10 +101,17 @@ const fates = [
   }
 ];
 
-document.getElementById("revealBtn").addEventListener("click", () => {
+const btn = document.getElementById("revealBtn");
+btn.addEventListener("click", () => {
+  // Pop‑Effekt
+  btn.classList.add("clicked");
+  setTimeout(() => btn.classList.remove("clicked"), 300);
+
+  // Fate anzeigen (bestehender Code) …
   const fate = fates[Math.floor(Math.random() * fates.length)];
   document.getElementById("fateText").textContent = fate.text;
   document.getElementById("fateEmoji").textContent = fate.emoji;
   document.getElementById("fateTask").textContent = fate.task;
   document.getElementById("fateBox").classList.remove("hidden");
 });
+
