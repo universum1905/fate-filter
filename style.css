@@ -117,6 +117,8 @@ button.clicked {
   50%      { transform: scale(1.2); }
 }
 
-.emoji {
-  animation: emojiPulse 1.2s ease-in-out 1;
+/* Nur bei Klick‑Trigger */
+.emoji.pulse {
+  animation: emojiPulse 1.2s ease-in-out;
 }
+

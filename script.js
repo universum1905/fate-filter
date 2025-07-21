@@ -102,16 +102,24 @@ const fates = [
 ];
 
 const btn = document.getElementById("revealBtn");
+const emojiEl = document.getElementById("fateEmoji");
+
 btn.addEventListener("click", () => {
-  // Pop‑Effekt
+  // 1) Button‑Pop‑Effekt
   btn.classList.add("clicked");
   setTimeout(() => btn.classList.remove("clicked"), 300);
 
-  // Fate anzeigen (bestehender Code) …
+  // 2) Emoji‑Pulse neu triggern
+  emojiEl.classList.remove("pulse");      // Entferne Klasse, falls noch da
+  void emojiEl.offsetWidth;               // Reflow‑Trick
+  emojiEl.classList.add("pulse");         // Füge Klasse hinzu → startet Animation
+
+  // 3) Fate auswählen & anzeigen
   const fate = fates[Math.floor(Math.random() * fates.length)];
   document.getElementById("fateText").textContent = fate.text;
-  document.getElementById("fateEmoji").textContent = fate.emoji;
+  emojiEl.textContent = fate.emoji;
   document.getElementById("fateTask").textContent = fate.task;
   document.getElementById("fateBox").classList.remove("hidden");
 });
+
 
